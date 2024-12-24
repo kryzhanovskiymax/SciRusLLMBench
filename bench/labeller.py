@@ -26,3 +26,4 @@ class Labeller:
         inputs = self.tokenizer(prompt, return_tensors="pt")
         outputs = self.model.generate(**inputs, max_length=50, num_return_sequences=1)
         return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+2
